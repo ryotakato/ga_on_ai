@@ -62,6 +62,8 @@ selection_count: {selection_count}
 offspring_count: {offspring_count}
 ```
 
+**注意: プロンプトにファイルフォーマットや出力形式を追加してはならない。フォーマットはサブエージェント自身が定義を持っている。**
+
 完了するまで待つ。
 
 ### 5. Evaluatorサブエージェントの起動（mode が full または evaluate-only の場合）
