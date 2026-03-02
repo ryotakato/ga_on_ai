@@ -42,6 +42,10 @@ YAMLフロントマターから以下を取得する：
 - `initial_count`
 - `selection_count`
 - `offspring_count`
+- `selection_method`（未定義の場合は `elite`）
+- `diversity_count`（未定義の場合は `0`）
+- `tournament_size`（未定義の場合は `3`）
+- `meta_fields`（未定義の場合は空リスト）
 
 ### 3. セクションの分割
 
@@ -58,8 +62,12 @@ Task tool で gene-generator-agent を起動する。
 gene_dir: {gene_type}/gene
 crossbreeding_criteria: {crossbreeding セクションの本文}
 initial_count: {initial_count}
+selection_method: {selection_method}
 selection_count: {selection_count}
+diversity_count: {diversity_count}
+tournament_size: {tournament_size}
 offspring_count: {offspring_count}
+meta_fields: {meta_fields}
 ```
 
 **注意: プロンプトにファイルフォーマットや出力形式を追加してはならない。フォーマットはサブエージェント自身が定義を持っている。**
@@ -75,6 +83,8 @@ Task tool で gene-evaluator-agent を起動する。
 gene_dir: {gene_type}/gene
 evaluation_criteria: {evaluation セクションの本文}
 ```
+
+**注意: プロンプトにファイルフォーマットや出力形式を追加してはならない。フォーマットはサブエージェント自身が定義を持っている。**
 
 完了するまで待つ。
 
